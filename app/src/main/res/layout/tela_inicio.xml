@@ -77,7 +77,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
-                            android:alpha="0.85"
                             android:lineSpacingMultiplier="1.15"
                             android:tag="fixo"
                             android:text="Ative para detectar quedas mesmo com o app fechado."
@@ -166,7 +165,7 @@
                         android:lineSpacingMultiplier="1.15"
                         android:tag="fixo"
                         android:text="Toque no SOS. Você ainda tem 5 segundos para cancelar."
-                        android:textColor="#FFE3E5"
+                        android:textColor="#FFFFFF"
                         android:textSize="15sp" />
                 </LinearLayout>
 
