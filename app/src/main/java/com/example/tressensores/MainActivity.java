@@ -32,6 +32,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.appbar.MaterialToolbar;
@@ -119,6 +120,9 @@ public class MainActivity extends AppCompatActivity implements Estado.Ouvinte {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         if (getSupportActionBar() != null) getSupportActionBar().hide();
+        // Cabeçalho roxo atrás da barra de status: ícones claros
+        WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView())
+                .setAppearanceLightStatusBars(false);
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         ligarViews();
@@ -245,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements Estado.Ouvinte {
 
     private void mostrarSobre() {
         new MaterialAlertDialogBuilder(this)
-                .setTitle("Socorro")
+                .setTitle("Cai Cai Balão")
                 .setMessage("Detecção inteligente de quedas e assistência de emergência.\n\n"
                         + "Usa acelerômetro, giroscópio, proximidade, luminosidade e barômetro para "
                         + "detectar quedas, e envia a localização para a API Socorro e por SMS.\n\n"
@@ -305,7 +309,7 @@ public class MainActivity extends AppCompatActivity implements Estado.Ouvinte {
         findViewById(R.id.btnBateria).setOnClickListener(v -> pedirSemEconomiaDeBateria());
 
         TextView txtSobre = findViewById(R.id.txtSobre);
-        txtSobre.setText("Socorro 1.0 · " + Build.MANUFACTURER + " " + Build.MODEL);
+        txtSobre.setText("Cai Cai Balão 1.0 · " + Build.MANUFACTURER + " " + Build.MODEL);
     }
 
      private void executarNoServico(String acao) {

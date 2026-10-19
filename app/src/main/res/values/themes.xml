@@ -4,7 +4,7 @@
         <item name="colorPrimary">@color/socorro_preto</item>
         <item name="colorOnPrimary">@color/socorro_amarelo</item>
         <item name="colorSecondary">@color/socorro_amarelo</item>
-        <item name="colorOnSecondary">@color/socorro_preto</item>
+        <item name="colorOnSecondary">@color/socorro_texto_sobre_roxo</item>
         <item name="colorAccent">@color/socorro_preto</item>
         <item name="android:colorBackground">@color/socorro_fundo</item>
         <item name="android:windowLightStatusBar">true</item>

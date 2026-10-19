@@ -212,7 +212,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:tag="sec"
-            android:text="Socorro 1.0"
+            android:text="Cai Cai Balão 1.0"
             android:textSize="15sp" />
     </LinearLayout>
 </ScrollView>

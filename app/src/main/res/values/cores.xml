@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Paleta "estilo app de rua": amarelo forte + preto, fundo cinza bem claro,
-     vermelho só para emergência. Contraste alto para quem tem a vista cansada. -->
+<!-- Paleta Cai Cai Balão: roxo forte + preto, fundo cinza bem claro,
+     vermelho só para emergência. Contraste alto para quem tem a vista cansada.
+     Os nomes "amarelo" foram mantidos para não quebrar outros arquivos, mas a cor agora é roxa.
+     Sobre o roxo use texto BRANCO (5,3:1); preto sobre ele dá só 3,5:1. -->
 <resources>
-    <color name="socorro_amarelo">#FFD60A</color>
-    <color name="socorro_amarelo_escuro">#E6BE00</color>
-    <color name="socorro_amarelo_claro">#FFF6CC</color>
+    <color name="socorro_amarelo">#8D2EFF</color>
+    <color name="socorro_amarelo_escuro">#6F1FD6</color>
+    <color name="socorro_amarelo_claro">#F1E6FF</color>
     <color name="socorro_preto">#141414</color>
-    <color name="socorro_marrom">#5A4A00</color>
+    <color name="socorro_marrom">#F3E9FF</color>
+    <color name="socorro_texto_sobre_roxo">#FFFFFF</color>
 
     <color name="socorro_primaria">#141414</color>
     <color name="socorro_primaria_escura">#000000</color>
-    <color name="socorro_primaria_clara">#FFF6CC</color>
+    <color name="socorro_primaria_clara">#F1E6FF</color>
 
     <color name="socorro_fundo">#F4F4F4</color>
     <color name="socorro_card">#FFFFFF</color>

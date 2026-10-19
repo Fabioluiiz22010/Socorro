@@ -115,14 +115,14 @@
         <item name="android:tag">fixo</item>
     </style>
 
-    <!-- Botão principal: pílula amarela com texto preto -->
+    <!-- Botão principal: pílula roxa com texto branco -->
     <style name="Socorro.Botao">
         <item name="android:minHeight">64dp</item>
         <item name="android:textSize">19sp</item>
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0</item>
-        <item name="android:textColor">@color/socorro_preto</item>
+        <item name="android:textColor">@color/socorro_texto_sobre_roxo</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="backgroundTint">@color/socorro_amarelo</item>
@@ -184,7 +184,7 @@
         <item name="android:textSize">14sp</item>
     </style>
 
-    <!-- Cabeçalho amarelo e menu de baixo -->
+    <!-- Cabeçalho roxo e menu de baixo -->
     <style name="Socorro.BarraTitulo" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
@@ -194,7 +194,7 @@
     <style name="Socorro.BarraSubtitulo" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textSize">26sp</item>
         <item name="android:fontFamily">sans-serif-black</item>
-        <item name="android:textColor">@color/socorro_preto</item>
+        <item name="android:textColor">@color/socorro_texto_sobre_roxo</item>
     </style>
 
     <style name="Socorro.MenuTexto" parent="TextAppearance.MaterialComponents.Caption">

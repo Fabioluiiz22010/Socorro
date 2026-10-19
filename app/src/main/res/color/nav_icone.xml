@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ícone do menu de baixo: branco sobre o indicador roxo quando selecionado -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/socorro_texto_sobre_roxo" android:state_checked="true" />
+    <item android:color="@color/socorro_texto_2" />
+</selector>

@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- Cabeçalho amarelo com a saudação -->
+    <!-- Cabeçalho roxo com a saudação -->
     <FrameLayout
         android:id="@+id/barraTopo"
         android:layout_width="match_parent"
@@ -25,9 +25,9 @@
             android:layout_marginBottom="6dp"
             android:paddingStart="4dp"
             android:tag="fixo"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
             app:subtitleTextAppearance="@style/Socorro.BarraSubtitulo"
-            app:title="Socorro"
+            app:title="Cai Cai Balão"
             app:titleTextAppearance="@style/Socorro.BarraTitulo" />
     </FrameLayout>
 
@@ -72,7 +72,7 @@
         app:elevation="0dp"
         app:itemActiveIndicatorStyle="@style/Socorro.Indicador"
         app:itemIconSize="26dp"
-        app:itemIconTint="@color/nav_item"
+        app:itemIconTint="@color/nav_icone"
         app:itemPaddingTop="12dp"
         app:itemPaddingBottom="12dp"
         app:itemRippleColor="@color/socorro_amarelo_claro"

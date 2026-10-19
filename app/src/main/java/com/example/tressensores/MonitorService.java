@@ -562,7 +562,7 @@ public class MonitorService extends Service implements FallDetector.Listener {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         return new NotificationCompat.Builder(this, CANAL_MONITOR)
                 .setSmallIcon(R.drawable.ic_escudo)
-                .setContentTitle("Socorro está ativo")
+                .setContentTitle("Cai Cai Balão está ativo")
                 .setContentText(texto)
                 .setOngoing(true)
                 .setContentIntent(abrir)
