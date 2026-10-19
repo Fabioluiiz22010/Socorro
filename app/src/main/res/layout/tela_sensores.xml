@@ -296,9 +296,7 @@
 
                     <ImageView
                         style="@style/Socorro.IconeChip"
-                        android:background="@drawable/bg_chip_vermelho"
-                        android:src="@drawable/ic_navegar"
-                        app:tint="@color/socorro_vermelho" />
+                        android:src="@drawable/ic_navegar" />
 
                     <TextView
                         style="@style/Socorro.TextoForte"

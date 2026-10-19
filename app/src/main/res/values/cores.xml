@@ -22,9 +22,10 @@
     <color name="socorro_vermelho">#E3212F</color>
     <color name="socorro_vermelho_escuro">#B8141F</color>
     <color name="socorro_vermelho_claro">#FFE5E7</color>
-    <color name="socorro_verde">#079455</color>
+    <!-- verde e laranja escurecidos: o texto branco sobre eles precisa de contraste 4,5:1 -->
+    <color name="socorro_verde">#067647</color>
     <color name="socorro_verde_claro">#E3F6EC</color>
-    <color name="socorro_laranja">#D96A00</color>
+    <color name="socorro_laranja">#B45309</color>
     <color name="socorro_laranja_claro">#FFEEDB</color>
     <color name="socorro_azul">#2F66E0</color>
     <color name="socorro_azul_claro">#E6EEFD</color>

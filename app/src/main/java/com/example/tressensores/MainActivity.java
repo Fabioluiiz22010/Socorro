@@ -51,13 +51,15 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity implements Estado.Ouvinte {
 
     // Cores (as mesmas de res/values/cores.xml)
-    private static final int NAVY = Color.parseColor("#1F2937");      // texto principal
-    private static final int NAVY_2 = Color.parseColor("#0F766E");    // verde-petróleo (proteção desligada)
-    private static final int VERDE = Color.parseColor("#15803D");
-    private static final int VERMELHO = Color.parseColor("#C62828");
+    private static final int NAVY = Color.parseColor("#141414");      // texto principal (socorro_texto)
+    private static final int NAVY_2 = Color.parseColor("#141414");    // proteção desligada (socorro_preto)
+    private static final int VERDE = Color.parseColor("#067647");
+    private static final int VERMELHO = Color.parseColor("#E3212F");
     private static final int LARANJA = Color.parseColor("#B45309");
-    private static final int AZUL = Color.parseColor("#1D4ED8");
-    private static final int CINZA = Color.parseColor("#6B7280");
+    private static final int AZUL = Color.parseColor("#2F66E0");
+    private static final int CINZA = Color.parseColor("#6F6F6F");
+    private static final int FUNDO = Color.parseColor("#F4F4F4");     // socorro_fundo
+    private static final int BORDA = Color.parseColor("#EBEBEB");     // socorro_borda
 
     private SharedPreferences prefs;
     private LocationManager locationManager;
@@ -602,7 +604,7 @@ public class MainActivity extends AppCompatActivity implements Estado.Ouvinte {
     private void aplicarModoNoturno(boolean noturno) {
         if (modoNoturno == noturno) return;
         modoNoturno = noturno;
-        raiz.setBackgroundColor(noturno ? Color.parseColor("#111827") : Color.parseColor("#FBF7F2"));
+        raiz.setBackgroundColor(noturno ? Color.parseColor("#111827") : FUNDO);
         navegacao.setBackgroundColor(noturno ? Color.parseColor("#1F2937") : Color.WHITE);
         pintar((ViewGroup) raiz);
         atualizarInicio();
@@ -611,9 +613,9 @@ public class MainActivity extends AppCompatActivity implements Estado.Ouvinte {
 
     private void pintar(ViewGroup grupo) {
         int fundoCard = modoNoturno ? Color.parseColor("#1F2937") : Color.WHITE;
-        int borda = modoNoturno ? Color.parseColor("#374151") : Color.parseColor("#E7DFD4");
+        int borda = modoNoturno ? Color.parseColor("#374151") : BORDA;
         int textoPrincipal = modoNoturno ? Color.parseColor("#F9FAFB") : NAVY;
-        int textoSecundario = modoNoturno ? Color.parseColor("#D1D5DB") : Color.parseColor("#4B5563");
+        int textoSecundario = modoNoturno ? Color.parseColor("#D1D5DB") : CINZA;
 
         for (int i = 0; i < grupo.getChildCount(); i++) {
             View v = grupo.getChildAt(i);

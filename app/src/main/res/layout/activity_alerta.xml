@@ -65,7 +65,7 @@
             android:insetBottom="0dp"
             android:text="Estou bem"
             android:textAllCaps="false"
-            android:textColor="@color/socorro_vermelho"
+            android:textColor="@color/socorro_vermelho_escuro"
             android:textSize="28sp"
             android:textStyle="bold"
             app:backgroundTint="#FFFFFF"
@@ -94,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:textColor="#FFE4E1"
+            android:textColor="#FFFFFF"
             android:textSize="15sp" />
     </LinearLayout>
 </LinearLayout>

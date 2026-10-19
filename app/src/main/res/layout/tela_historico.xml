@@ -34,10 +34,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Limpar"
-                android:textColor="@color/socorro_vermelho"
+                android:textColor="@color/socorro_vermelho_escuro"
                 app:icon="@drawable/ic_lixeira"
                 app:iconSize="20dp"
-                app:iconTint="@color/socorro_vermelho"
+                app:iconTint="@color/socorro_vermelho_escuro"
                 app:rippleColor="@color/socorro_vermelho_claro" />
         </LinearLayout>
 
