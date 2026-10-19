@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alerta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/socorro_vermelho"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".AlertaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Você caiu?"
+            android:textColor="#FFFFFF"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Se você está bem, toque no botão branco."
+            android:textColor="#FFFFFF"
+            android:textSize="21sp" />
+
+        <!-- Número grande da contagem -->
+        <TextView
+            android:id="@+id/txtSegundos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="30"
+            android:textColor="#FFFFFF"
+            android:textSize="128sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="segundos para chamar ajuda"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginTop="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Estou bem"
+            android:textAllCaps="false"
+            android:textColor="@color/socorro_vermelho"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="28dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnviarAgora"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Preciso de ajuda agora"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="28dp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="2dp" />
+
+         <TextView
+            android:id="@+id/txtMotivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textColor="#FFE4E1"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

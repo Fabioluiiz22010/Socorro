@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            style="@style/Socorro.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Sensores" />
+
+        <TextView
+            android:id="@+id/txtSensoresAviso"
+            style="@style/Socorro.TextoSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:tag="sec"
+            android:text="Ative a proteção na tela Início para ver as leituras."
+            android:textSize="15sp" />
+
+        <!-- Linha 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Socorro.Card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/Socorro.IconeChip"
+                        android:src="@drawable/ic_sensores" />
+
+                    <TextView
+                        style="@style/Socorro.TextoForte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Movimento"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valAceleracao"
+                        style="@style/Socorro.Valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="—" />
+
+                    <TextView
+                        style="@style/Socorro.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Acelerômetro"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Socorro.Card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/Socorro.IconeChip"
+                        android:background="@drawable/bg_chip_azul"
+                        android:src="@drawable/ic_girar"
+                        app:tint="@color/socorro_azul" />
+
+                    <TextView
+                        style="@style/Socorro.TextoForte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Giro do corpo"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valRotacao"
+                        style="@style/Socorro.Valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="—" />
+
+                    <TextView
+                        style="@style/Socorro.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Giroscópio"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Linha 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Socorro.Card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/Socorro.IconeChip"
+                        android:background="@drawable/bg_chip_verde"
+                        android:src="@drawable/ic_celular"
+                        app:tint="@color/socorro_verde" />
+
+                    <TextView
+                        style="@style/Socorro.TextoForte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Celular está"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valPosicao"
+                        style="@style/Socorro.Valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="—" />
+
+                    <TextView
+                        style="@style/Socorro.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Proximidade"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Socorro.Card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/Socorro.IconeChip"
+                        android:background="@drawable/bg_chip_laranja"
+                        android:src="@drawable/ic_sol"
+                        app:tint="@color/socorro_laranja" />
+
+                    <TextView
+                        style="@style/Socorro.TextoForte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Claridade"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valLuz"
+                        style="@style/Socorro.Valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="—" />
+
+                    <TextView
+                        style="@style/Socorro.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Sensor de luz"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Linha 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Socorro.Card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/Socorro.IconeChip"
+                        android:background="@drawable/bg_chip_azul"
+                        android:src="@drawable/ic_nuvem"
+                        app:tint="@color/socorro_azul" />
+
+                    <TextView
+                        style="@style/Socorro.TextoForte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Pressão do ar"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valPressao"
+                        style="@style/Socorro.Valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="—" />
+
+                    <TextView
+                        style="@style/Socorro.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="Barômetro"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Socorro.Card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/Socorro.IconeChip"
+                        android:background="@drawable/bg_chip_vermelho"
+                        android:src="@drawable/ic_navegar"
+                        app:tint="@color/socorro_vermelho" />
+
+                    <TextView
+                        style="@style/Socorro.TextoForte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Velocidade"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/valGps"
+                        style="@style/Socorro.Valor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="—" />
+
+                    <TextView
+                        style="@style/Socorro.TextoSec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:tag="sec"
+                        android:text="GPS"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_local"
+                app:tint="@color/socorro_vermelho" />
+
+            <TextView
+                android:id="@+id/txtLocalizacao"
+                style="@style/Socorro.TextoSec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:tag="sec"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Socorro.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="28dp"
+            android:text="Como uma queda é percebida" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Socorro.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:contentPaddingTop="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_selo_amarelo"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:tag="fixo"
+                        android:text="1"
+                        android:textColor="@color/socorro_preto"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Socorro.Texto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:paddingTop="2dp"
+                        android:text="Sente o celular cair e bater com força."
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_selo_amarelo"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:tag="fixo"
+                        android:text="2"
+                        android:textColor="@color/socorro_preto"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Socorro.Texto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:paddingTop="2dp"
+                        android:text="Confere se o corpo girou de repente."
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_selo_amarelo"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:tag="fixo"
+                        android:text="3"
+                        android:textColor="@color/socorro_preto"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Socorro.Texto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:paddingTop="2dp"
+                        android:text="Vê se o celular está no bolso ou na mão, para não confundir com uma sacudida."
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_selo_amarelo"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:tag="fixo"
+                        android:text="4"
+                        android:textColor="@color/socorro_preto"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Socorro.Texto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:paddingTop="2dp"
+                        android:text="Estima quantos metros você desceu."
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/bg_selo_amarelo"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:tag="fixo"
+                        android:text="5"
+                        android:textColor="@color/socorro_preto"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/Socorro.Texto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:paddingTop="2dp"
+                        android:text="Se tudo indicar uma queda, pergunta se você está bem antes de pedir ajuda."
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

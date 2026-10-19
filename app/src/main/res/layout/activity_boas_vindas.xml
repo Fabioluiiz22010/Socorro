@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boasVindas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/socorro_fundo"
+    android:fillViewport="true"
+    tools:context=".BoasVindasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="40dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="32dp">
+
+          <FrameLayout
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_ponto"
+            android:backgroundTint="@color/socorro_primaria">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:contentDescription="Escudo de proteção"
+                android:src="@drawable/ic_escudo"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <TextView
+            style="@style/Socorro.Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Olá! Seja bem-vindo"
+            android:textSize="30sp" />
+
+        <TextView
+            style="@style/Socorro.Texto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Se você cair, o app percebe e chama ajuda por você, mesmo que não consiga pedir."
+            android:textColor="@color/socorro_texto_2"
+            android:textSize="19sp" />
+
+         <com.google.android.material.card.MaterialCardView
+            style="@style/Socorro.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/socorro_primaria_clara"
+            app:strokeWidth="0dp">
+
+            <TextView
+                style="@style/Socorro.Texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:text="✓  Percebe quedas sozinho\n✓  Avisa a central onde você está\n✓  Manda mensagem para um familiar\n✓  Funciona com o app fechado"
+                android:textColor="@color/socorro_primaria_escura" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/Socorro.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Como você se chama?" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campoNome"
+            style="@style/Socorro.Campo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Seu nome">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNome"
+                style="@style/Socorro.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="150" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/Socorro.Subtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Quem devemos avisar?" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Socorro.Campo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Telefone de um familiar (opcional)"
+            app:helperText="Pode preencher depois, em Ajustes.">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTelefoneInicial"
+                style="@style/Socorro.CampoTexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnComecar"
+            style="@style/Socorro.Botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:minHeight="72dp"
+            android:text="Começar"
+            android:textSize="22sp" />
+    </LinearLayout>
+</ScrollView>

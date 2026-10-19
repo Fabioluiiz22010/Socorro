@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Estilos das telas: títulos pesados, cartões sem sombra, botões em pílula -->
+<resources>
+    <style name="Socorro" />
+
+    <!-- Textos -->
+    <style name="Socorro.Titulo">
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+    </style>
+
+    <style name="Socorro.Subtitulo">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+    </style>
+
+    <style name="Socorro.Texto">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="Socorro.TextoForte" parent="Socorro.Texto">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Socorro.TextoSec">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/socorro_texto_2</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <!-- Título de seção: "Atalhos", "Agora"... -->
+    <style name="Socorro.Secao">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+    </style>
+
+    <style name="Socorro.Valor">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+    </style>
+
+    <!-- Seloszinhos tipo "AO VIVO", "TESTE" -->
+    <style name="Socorro.Selo">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <!-- Cartão branco, sem borda e sem sombra -->
+    <style name="Socorro.Card">
+        <item name="cardBackgroundColor">@color/socorro_card</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPadding">18dp</item>
+        <item name="strokeColor">@color/socorro_borda</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- Linha de menu (ícone + texto + seta), como nas telas de perfil -->
+    <style name="Socorro.Linha">
+        <item name="android:minHeight">76dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Socorro.LinhaTexto">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">14dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Socorro.IconeChip">
+        <item name="android:layout_width">46dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:padding">11dp</item>
+        <item name="android:background">@drawable/bg_chip_amarelo</item>
+        <item name="tint">@color/socorro_preto</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="Socorro.Seta">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:src">@drawable/ic_seta</item>
+        <item name="tint">#9A9A9A</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
+
+    <style name="Socorro.Divisor">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">76dp</item>
+        <item name="android:background">@color/socorro_borda</item>
+        <item name="android:tag">fixo</item>
+    </style>
+
+    <!-- Botão principal: pílula amarela com texto preto -->
+    <style name="Socorro.Botao">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/socorro_preto</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/socorro_amarelo</item>
+        <item name="rippleColor">@color/socorro_amarelo_escuro</item>
+        <item name="cornerRadius">32dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Socorro.BotaoContorno" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:minHeight">60dp</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+        <item name="android:insetTop">4dp</item>
+        <item name="android:insetBottom">4dp</item>
+        <item name="strokeColor">@color/socorro_borda</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">32dp</item>
+    </style>
+
+    <style name="Socorro.BotaoTexto" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+    </style>
+
+    <!-- Campos de texto: caixa cinza preenchida, sem linha embaixo -->
+    <style name="Socorro.Campo" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxBackgroundColor">@color/socorro_campo</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="hintTextColor">@color/socorro_texto_2</item>
+        <item name="hintTextAppearance">@style/Socorro.Dica</item>
+        <item name="helperTextTextAppearance">@style/Socorro.Ajuda</item>
+        <item name="errorTextAppearance">@style/Socorro.Ajuda</item>
+    </style>
+
+    <style name="Socorro.CampoTexto">
+        <item name="android:textSize">19sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/socorro_texto</item>
+        <item name="android:minHeight">64dp</item>
+    </style>
+
+    <style name="Socorro.Dica" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Socorro.Ajuda" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Cabeçalho amarelo e menu de baixo -->
+    <style name="Socorro.BarraTitulo" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/socorro_marrom</item>
+    </style>
+
+    <style name="Socorro.BarraSubtitulo" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textSize">26sp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/socorro_preto</item>
+    </style>
+
+    <style name="Socorro.MenuTexto" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Socorro.Indicador" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/socorro_amarelo</item>
+        <item name="android:width">68dp</item>
+        <item name="android:height">36dp</item>
+    </style>
+</resources>

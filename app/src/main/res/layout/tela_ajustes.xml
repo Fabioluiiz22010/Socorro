@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/Socorro.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajustes" />
+
+        <!-- Meus dados -->
+        <TextView
+            style="@style/Socorro.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:tag="sec"
+            android:text="Meus dados" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Socorro.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/campoUsuario"
+                    style="@style/Socorro.Campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Seu nome">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtUsuario"
+                        style="@style/Socorro.CampoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLength="150" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Socorro.Campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Telefone de um familiar"
+                    app:helperText="Ele recebe uma mensagem com sua localização se você cair.">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTelefone"
+                        style="@style/Socorro.CampoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSalvar"
+                    style="@style/Socorro.Botao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Salvar meus dados" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Check-in -->
+        <TextView
+            style="@style/Socorro.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:tag="sec"
+            android:text="Perguntar se estou bem" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Socorro.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchCheckin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:text="Ligar o check-in"
+                    android:textColor="@color/socorro_texto"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/Socorro.TextoSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:tag="sec"
+                    android:text="De tempos em tempos o app pergunta se está tudo bem. Se você não responder em 30 segundos, ele pede ajuda." />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Socorro.Campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Perguntar a cada"
+                    app:suffixText="minutos"
+                    app:suffixTextAppearance="@style/Socorro.Dica">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtIntervalo"
+                        style="@style/Socorro.CampoTexto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="3" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Permissões -->
+        <TextView
+            style="@style/Socorro.Secao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:tag="sec"
+            android:text="Funcionar com o app fechado" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Socorro.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Socorro.TextoSec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="sec"
+                    android:text="Para o app proteger você o tempo todo, todos os itens abaixo precisam estar liberados." />
+
+                <!-- Linhas de situação criadas pelo código -->
+                <LinearLayout
+                    android:id="@+id/listaPermissoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPermissoesBasicas"
+                    style="@style/Socorro.BotaoContorno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Localização, mensagens e avisos" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSobrepor"
+                    style="@style/Socorro.BotaoContorno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Abrir por cima de outros apps" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTelaCheia"
+                    style="@style/Socorro.BotaoContorno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alerta em tela cheia" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBateria"
+                    style="@style/Socorro.BotaoContorno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Não economizar bateria" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txtSobre"
+            style="@style/Socorro.TextoSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:tag="sec"
+            android:text="Socorro 1.0"
+            android:textSize="15sp" />
+    </LinearLayout>
+</ScrollView>

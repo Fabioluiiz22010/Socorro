@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- O app cuida do próprio modo noturno (pelo sensor de luz), então o tema é claro de dia e de noite -->
+    <style name="Base.Theme.TresSensores" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/socorro_preto</item>
+        <item name="colorOnPrimary">@color/socorro_amarelo</item>
+        <item name="colorSecondary">@color/socorro_amarelo</item>
+        <item name="colorOnSecondary">@color/socorro_preto</item>
+        <item name="colorAccent">@color/socorro_preto</item>
+        <item name="android:colorBackground">@color/socorro_fundo</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="Theme.TresSensores" parent="Base.Theme.TresSensores" />
+</resources>
